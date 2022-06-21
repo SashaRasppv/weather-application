@@ -30,8 +30,8 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   Image.network(_response!.iconUrl),
                   Text(
-                    '${_response!.tempInfo.temperature}°',
-                    style: TextStyle(fontSize: 40),
+                    '${((_response!.tempInfo.temperature! - 32) / 1.8).round()}°',
+                    style: const TextStyle(fontSize: 40),
                   ),
                   Text(_response!.weatherInfo!.description.toString())
                 ],

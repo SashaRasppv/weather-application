@@ -38,7 +38,6 @@ class WeatherResponse {
 
   factory WeatherResponse.fromJson(Map<String, dynamic> json) {
     final cityName = json['name'];
-
     final tempInfoJson = json['main'];
     final tempInfo = TemperatureInfo.fromJson(tempInfoJson);
 
